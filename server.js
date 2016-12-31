@@ -113,6 +113,10 @@ slapp.message('.*', ['direct_mention', 'direct_message'], (msg) => {
   }
 })
 
+slapp.command('stej', (msg) => {
+  msg.say("stej")
+})
+
 // attach Slapp to express server
 var server = slapp.attachToExpress(express())
 

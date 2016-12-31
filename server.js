@@ -113,8 +113,10 @@ slapp.message('.*', ['direct_mention', 'direct_message'], (msg) => {
   }
 })
 
-slapp.command('stej', (msg) => {
-  msg.say("stej")
+slapp.command('/stej', '(.*)', (msg, command, text) => {
+  msg
+    .say(":smile:")
+    .say(text);
 })
 
 // attach Slapp to express server
